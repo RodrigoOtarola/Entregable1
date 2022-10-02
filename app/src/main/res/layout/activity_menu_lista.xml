@@ -4,6 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#75358B"
     tools:context=".Menu_Lista">
 
+    <LinearLayout
+        android:layout_width="327dp"
+        android:layout_height="323dp"
+        android:background="#FFFFFF"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="-1dp"></LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
