@@ -4,6 +4,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Menu_Lista_Locales">
+    android:background="#75358B"
+    tools:context=".Menu_Realizar_Reserva">
+
+    <com.google.android.material.bottomappbar.BottomAppBar
+        android:id="@+id/bottomAppBar"
+        android:layout_width="479dp"
+        android:layout_height="53dp"
+        android:layout_gravity="bottom"
+        android:background="#A662BB"
+        app:backgroundTint="#A662BB"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.998"
+        app:navigationIcon="@drawable/ic_baseline_menu_24"
+        tools:layout_editor_absoluteX="1dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

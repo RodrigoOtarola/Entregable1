@@ -101,13 +101,30 @@
             android:exported="false" />
         <activity
             android:name=".MainActivity"
+<<<<<<< HEAD
             android:exported="true">
+=======
+            android:exported="false" >
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.MAIN" />-->
+
+<!--                <category android:name="android.intent.category.LAUNCHER" />-->
+<!--            </intent-filter>-->
+        </activity>
+
+<!--        Prueba Rodrigo-->
+
+        <activity
+            android:name=".Menu_Lista"
+            android:exported="true" >
+>>>>>>> b491ab8e5774915e85195dbda773d4afd83caf56
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
     </application>
 
 </manifest>
