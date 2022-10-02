@@ -11,6 +11,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Test"
+<<<<<<< HEAD
         tools:targetApi="31">
         <activity
             android:name=".Editar_Perfil"
@@ -116,6 +117,12 @@
 
         <activity
             android:name=".Menu_Lista"
+=======
+        tools:targetApi="31" >
+
+        <activity
+            android:name=".MainActivity"
+>>>>>>> 150fa8927d983f2d246713bfb4cb494a4d4b8069
             android:exported="true" >
 >>>>>>> b491ab8e5774915e85195dbda773d4afd83caf56
             <intent-filter>
@@ -123,6 +130,18 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+
+<!--        Prueba Rodrigo-->
+
+        <activity
+            android:name=".Menu_Lista"
+            android:exported="false" >
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.MAIN" />-->
+
+<!--                <category android:name="android.intent.category.LAUNCHER" />-->
+<!--            </intent-filter>-->
         </activity>
 
     </application>
