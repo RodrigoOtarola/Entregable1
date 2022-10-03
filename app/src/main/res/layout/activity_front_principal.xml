@@ -5,4 +5,56 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#75358B"
-    tools:context=".Front_Principal"/>
+    android:textAlignment="textEnd"
+    tools:context=".Front_Principal">
+
+    <ImageButton
+        android:id="@+id/imageButton5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#9C27B0"
+        android:contentDescription="@string/appbar_scrolling_view_behavior"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/u_as"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp" />
+
+    <com.google.android.material.bottomappbar.BottomAppBar
+        android:id="@+id/bottomAppBar"
+        android:layout_width="479dp"
+        android:layout_height="53dp"
+        android:layout_gravity="bottom"
+        android:background="#A662BB"
+        android:textAlignment="center"
+        app:backgroundTint="#A662BB"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:navigationIcon="@drawable/ic_baseline_menu_24"
+        app:title="Hola"
+        tools:layout_editor_absoluteX="1dp" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        app:srcCompat="@drawable/ic_baseline_person_24"
+        tools:layout_editor_absoluteX="374dp"
+        tools:layout_editor_absoluteY="691dp"
+        tools:visibility="visible" />
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1040dp"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.962"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_baseline_person_24"
+        tools:visibility="visible" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

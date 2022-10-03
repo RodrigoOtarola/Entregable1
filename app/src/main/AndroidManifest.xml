@@ -25,7 +25,7 @@
         <!--        Prueba Rodrigo-->
 
         <activity
-            android:name=".Menu_Lista"
+            android:name=".Menu_Mapa"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
