@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#75358B"
-    android:orientation="horizontal"
+    android:orientation="vertical"
     tools:context=".Servicio">
 
     <LinearLayout
@@ -14,15 +14,6 @@
         android:orientation="vertical"
         tools:ignore="ExtraText,UselessParent">
 
-
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Informacion de la Reserva"
-            android:textAppearance="text"
-            android:textSize="60sp" />
 
         <EditText
             android:id="@+id/editTextTextPersonName"
