@@ -12,6 +12,73 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Test"
         tools:targetApi="31" >
+
+        <activity
+            android:name=".Reserva"
+            android:exported="false" >
+        </activity>
+
+        <activity
+            android:name=".Menu_Servicio"
+            android:exported="false" >
+        </activity>
+
+        <activity
+            android:name=".Menu_Reservas"
+            android:exported="false" >
+        </activity>
+
+        <activity
+            android:name=".Menu_Realizar_Reserva"
+            android:exported="false" >
+        </activity>
+
+        <activity
+            android:name=".Menu_Mapa"
+            android:exported="false" >
+        </activity>
+
+        <activity
+            android:name=".Menu_Locales"
+            android:exported="false" >
+        </activity>
+
+        <activity
+            android:name=".Menu_Lista_Locales"
+            android:exported="false" >
+        </activity>
+
+        <activity
+            android:name=".Menu_Lista"
+            android:exported="false" >
+        </activity>
+
+        <activity
+            android:name=".Menu_Historial"
+            android:exported="false" >
+        </activity>
+
+        <activity
+            android:name=".Front_Principal"
+            android:exported="false" >
+        </activity>
+
+        <activity
+            android:name=".Editar_Perfil"
+            android:exported="false" >
+        </activity>
+
+        <!--        Prueba Rodrigo-->
+
+        <activity
+            android:name=".Servicio"
+            android:exported="false" >
+            <!--            <intent-filter>-->
+            <!--                <action android:name="android.intent.action.MAIN" />-->
+
+            <!--                <category android:name="android.intent.category.LAUNCHER" />-->
+            <!--            </intent-filter>-->
+        </activity>
         <activity
             android:name=".MainActivity"
             android:exported="true" >
@@ -22,17 +89,6 @@
                         </intent-filter>
         </activity>
 
-        <!--        Prueba Rodrigo-->
-
-        <activity
-            android:name=".Servicio"
-            android:exported="false" >
-<!--            <intent-filter>-->
-<!--                <action android:name="android.intent.action.MAIN" />-->
-
-<!--                <category android:name="android.intent.category.LAUNCHER" />-->
-<!--            </intent-filter>-->
-        </activity>
 
     </application>
 
