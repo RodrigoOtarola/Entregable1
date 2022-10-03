@@ -29,9 +29,40 @@
         app:backgroundTint="#A662BB"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"
+        app:layout_constraintVertical_bias="0.998"
         app:navigationIcon="@drawable/ic_baseline_menu_24"
         app:title="Hola"
         tools:layout_editor_absoluteX="1dp" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="373dp"
+        android:layout_height="51dp"
+        android:layout_marginStart="104dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintStart_toStartOf="@+id/bottomAppBar"
+        app:layout_constraintTop_toTopOf="@+id/bottomAppBar">
+
+        <ImageButton
+            android:id="@+id/imageButton13"
+            android:layout_width="46dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="300dp"
+            android:background="#A662BB"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/ic_baseline_person_24"
+            tools:layout_editor_absoluteY="5dp" />
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="186dp"
+            android:layout_height="33dp"
+            android:layout_marginStart="40dp"
+            android:text="Tu espacio"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="5dp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
