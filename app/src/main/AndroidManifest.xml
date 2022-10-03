@@ -25,7 +25,7 @@
         <!--        Prueba Rodrigo-->
 
         <activity
-            android:name=".Menu_Lista_Locales"
+            android:name=".Menu_Realizar_Reserva"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
