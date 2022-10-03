@@ -5,7 +5,90 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#75358B"
-    tools:context=".Menu_Realizar_Reserva">
+    android:textAlignment="center"
+    tools:context=".Menu_Reservas">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="481dp"
+        android:layout_height="466dp"
+        android:layout_marginTop="96dp"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="1dp">
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="367dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="40dp"
+            android:background="#A662BB"
+            android:text="Locales"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="140dp" />
+
+        <ImageButton
+            android:id="@+id/imageButton3"
+            android:layout_width="61dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="72dp"
+            android:background="#A662BB"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:srcCompat="@drawable/ic_baseline_local_activity_24"
+            tools:layout_editor_absoluteY="140dp" />
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="367dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="40dp"
+            android:background="#A662BB"
+            android:text="Ubicación"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+        <ImageButton
+            android:id="@+id/imageButton4"
+            android:layout_width="61dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="72dp"
+            android:background="#A662BB"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageButton3"
+            app:srcCompat="@drawable/ic_baseline_location_on_24" />
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="367dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="124dp"
+            android:background="#A662BB"
+            android:text="Servicios"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+        <ImageButton
+            android:id="@+id/imageButton5"
+            android:layout_width="61dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="34dp"
+            android:layout_marginEnd="72dp"
+            android:background="#A662BB"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageButton4"
+            app:srcCompat="@drawable/ic_baseline_format_list_bulleted_24" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <com.google.android.material.bottomappbar.BottomAppBar
         android:id="@+id/bottomAppBar"
@@ -13,11 +96,13 @@
         android:layout_height="53dp"
         android:layout_gravity="bottom"
         android:background="#A662BB"
+        android:textAlignment="center"
         app:backgroundTint="#A662BB"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.998"
         app:navigationIcon="@drawable/ic_baseline_menu_24"
+        app:title="Hola"
         tools:layout_editor_absoluteX="1dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
