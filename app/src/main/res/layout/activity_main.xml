@@ -41,28 +41,32 @@
             android:orientation="vertical"
             android:padding="12dp">
 
-            <EditText
-                android:id="@+id/editTextTextEmailAddress"
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/user"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/border_top"
-                android:ems="10"
-                android:hint="Correo electrónico"
-                android:inputType="textEmailAddress"
-                android:padding="15dp" />
+                android:layout_height="wrap_content">
 
-            <EditText
-                android:id="@+id/editTextTextPassword"
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Correo electrónico" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/pass"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/border_bottom"
-                android:ems="10"
-                android:hint="Contraseña (+ 6 Caracteres)"
-                android:inputType="textPassword"
-                android:padding="15dp" />
+                app:passwordToggleEnabled="true">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Contraseña"
+                    android:password="true" />
+            </com.google.android.material.textfield.TextInputLayout>
 
             <Button
-                android:id="@+id/button"
+                android:id="@+id/btn_login"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
@@ -121,7 +125,7 @@
             </LinearLayout>
 
             <Button
-                android:id="@+id/button2"
+                android:id="@+id/btn_register"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
