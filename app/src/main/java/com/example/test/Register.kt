@@ -6,7 +6,6 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.Toast
 import com.google.android.material.textfield.TextInputLayout
-import org.w3c.dom.Text
 
 class Register : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -18,7 +17,7 @@ class Register : AppCompatActivity() {
         val email = findViewById<TextInputLayout>(R.id.email)
         val password = findViewById<TextInputLayout>(R.id.password)
         val confirm_password = findViewById<TextInputLayout>(R.id.confirm_password)
-        val btn_saveUSer = findViewById<Button>(R.id.btn_saveUSer)
+        val btn_saveUSer = findViewById<Button>(R.id.btn_updateUser)
 
         btn_saveUSer.setOnClickListener {
 
