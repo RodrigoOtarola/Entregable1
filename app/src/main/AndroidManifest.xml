@@ -36,7 +36,7 @@
             android:name=".Menu_Reservas"
             android:exported="false" />
         <activity
-            android:name=".Menu_Realizar_Reserva"
+            android:name=".Splash"
             android:exported="false" />
         <activity
             android:name=".Menu_Mapa"
@@ -71,7 +71,7 @@
             <!-- </intent-filter> -->
         </activity>
         <activity
-            android:name=".Splash"
+            android:name=".Menu_Realizar_Reserva"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
