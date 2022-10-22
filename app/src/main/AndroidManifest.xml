@@ -45,13 +45,13 @@
             android:name=".Menu_Locales"
             android:exported="false" />
         <activity
-            android:name=".Menu_Lista_Locales"
+            android:name=".Menu_Historial"
             android:exported="false" />
         <activity
             android:name=".Menu_Lista"
             android:exported="false" />
         <activity
-            android:name=".Menu_Historial"
+            android:name=".Menu_Realizar_Reserva"
             android:exported="false" />
         <activity
             android:name=".Front_Principal"
@@ -71,7 +71,7 @@
             <!-- </intent-filter> -->
         </activity>
         <activity
-            android:name=".Menu_Realizar_Reserva"
+            android:name=".Menu_Lista_Locales"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

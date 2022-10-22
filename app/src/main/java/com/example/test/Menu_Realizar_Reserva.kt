@@ -9,7 +9,6 @@ import android.os.Bundle
 import android.widget.ImageButton
 import android.widget.Toast
 import com.google.android.material.textfield.TextInputLayout
-import org.w3c.dom.Text
 
 class Menu_Realizar_Reserva : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -18,7 +17,7 @@ class Menu_Realizar_Reserva : AppCompatActivity() {
 
         val date = findViewById<TextInputLayout>(R.id.date)
         val hour = findViewById<TextInputLayout>(R.id.hour)
-        val btn_rollbackFront = findViewById<ImageButton>(R.id.btn_rollbackFront)
+        val btn_rollbackMRR = findViewById<ImageButton>(R.id.btn_rollbackMRR)
         val btn_saveReserve = findViewById<ImageButton>(R.id.btn_saveReserve)
 
         //Intancia de calendar
@@ -64,7 +63,7 @@ class Menu_Realizar_Reserva : AppCompatActivity() {
         }
 
         //Boton volver
-        btn_rollbackFront.setOnClickListener {
+        btn_rollbackMRR.setOnClickListener {
             val intent = Intent(this@Menu_Realizar_Reserva,Front_Principal::class.java)
             startActivity(intent)
         }
