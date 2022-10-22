@@ -9,6 +9,7 @@ import android.os.Bundle
 import android.widget.ImageButton
 import android.widget.Toast
 import com.google.android.material.textfield.TextInputLayout
+import org.w3c.dom.Text
 
 class Menu_Realizar_Reserva : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -17,6 +18,7 @@ class Menu_Realizar_Reserva : AppCompatActivity() {
 
         val date = findViewById<TextInputLayout>(R.id.date)
         val hour = findViewById<TextInputLayout>(R.id.hour)
+        val btn_rollbackFront = findViewById<ImageButton>(R.id.btn_rollbackFront)
         val btn_saveReserve = findViewById<ImageButton>(R.id.btn_saveReserve)
 
         //Intancia de calendar
@@ -30,10 +32,8 @@ class Menu_Realizar_Reserva : AppCompatActivity() {
             var setDay = "$day"
             if (auxMonth < 10) setMonth = "0$auxMonth"
             if (day < 10) setDay = "0$setDay"
-
             date.editText?.setText("$setDay/$setMonth/$year")
         }
-
         date.editText?.setOnClickListener {
             DatePickerDialog(
                 this@Menu_Realizar_Reserva,
@@ -43,6 +43,7 @@ class Menu_Realizar_Reserva : AppCompatActivity() {
                 calendar.get(Calendar.DAY_OF_MONTH)
             ).show()
         }
+
         //Hora
         val listenerHour = TimePickerDialog.OnTimeSetListener { timePicker, hours, minutes ->
             var auxHour = hours
@@ -50,10 +51,8 @@ class Menu_Realizar_Reserva : AppCompatActivity() {
             var setMinutes = "$minutes"
             if (auxHour < 10) setHour = "0$auxHour"
             if (minutes < 10) setMinutes = "0$setMinutes"
-
             hour.editText?.setText("$setHour:$setMinutes")
         }
-
         hour.editText?.setOnClickListener {
             TimePickerDialog(
                 this@Menu_Realizar_Reserva,
@@ -62,6 +61,12 @@ class Menu_Realizar_Reserva : AppCompatActivity() {
                 calendar.get(Calendar.MINUTE),
                 true
             ).show()
+        }
+
+        //Boton volver
+        btn_rollbackFront.setOnClickListener {
+            val intent = Intent(this@Menu_Realizar_Reserva,Front_Principal::class.java)
+            startActivity(intent)
         }
 
         //Boton de guardar con validacion
