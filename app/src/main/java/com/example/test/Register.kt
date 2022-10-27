@@ -97,6 +97,17 @@ class Register : AppCompatActivity() {
             confirm_password.error = ""
         }
 
+        //VALIDAR CONTRASEÑAS IGUALES.
+        /*if(password != confirm_password){
+            password.error = getString(R.string.equals_pass)
+            confirm_password.error = getString(R.string.equals_pass)
+            contador ++
+        }else{
+            password.error=""
+            confirm_password.error=""
+        }*/
+
+
         return contador
     }
 }
