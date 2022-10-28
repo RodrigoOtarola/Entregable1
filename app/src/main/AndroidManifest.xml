@@ -27,13 +27,13 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".Reserva"
+            android:name=".Menu_Reservas"
             android:exported="false" />
         <activity
             android:name=".Menu_Servicio"
             android:exported="false" />
         <activity
-            android:name=".Splash"
+            android:name=".Reserva"
             android:exported="false" />
         <activity
             android:name=".Menu_Lista_Locales"
@@ -71,7 +71,7 @@
             <!-- </intent-filter> -->
         </activity>
         <activity
-            android:name=".Menu_Reservas"
+            android:name=".Splash"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

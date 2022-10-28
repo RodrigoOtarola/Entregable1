@@ -64,7 +64,7 @@ class Menu_Realizar_Reserva : AppCompatActivity() {
 
         //Boton volver
         btn_rollbackMRR.setOnClickListener {
-            val intent = Intent(this@Menu_Realizar_Reserva,Front_Principal::class.java)
+            val intent = Intent(this@Menu_Realizar_Reserva,Menu_Reservas::class.java)
             startActivity(intent)
         }
 
@@ -74,7 +74,7 @@ class Menu_Realizar_Reserva : AppCompatActivity() {
             var Hour = hour.editText?.text.toString()
             if (validarCampos()==0) {
                 Toast.makeText(this, "Reserva realizada con exito", Toast.LENGTH_SHORT).show()
-                val intent = Intent(this@Menu_Realizar_Reserva, Menu_Realizar_Reserva::class.java)
+                val intent = Intent(this@Menu_Realizar_Reserva, Front_Principal::class.java)
                 startActivity(intent)
             }
         }
