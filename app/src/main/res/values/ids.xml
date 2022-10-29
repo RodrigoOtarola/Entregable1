@@ -1,4 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <item name="btn_MenuMapa" type="id" />
+    <item name="btn_reservarMS" type="id" />
+    <item name="btn_rollbackMS" type="id" />
+    <item name="btn_reservar" type="id" />
+    <item name="btn_rollback" type="id" />
 </resources>
