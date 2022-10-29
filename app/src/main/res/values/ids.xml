@@ -5,4 +5,8 @@
     <item name="btn_rollbackMS" type="id" />
     <item name="btn_reservar" type="id" />
     <item name="btn_rollback" type="id" />
+    <item name="btn_servicio1" type="id" />
+    <item name="btn_servicio2" type="id" />
+    <item name="btn_servicio3" type="id" />
+    <item name="btn_return" type="id" />
 </resources>
