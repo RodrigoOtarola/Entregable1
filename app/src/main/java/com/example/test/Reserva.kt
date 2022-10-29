@@ -31,7 +31,7 @@ class Reserva : AppCompatActivity() {
 
         //BOTON VOLVER
         btn_rollbackReserva.setOnClickListener {
-            val intent = Intent(this@Reserva,Menu_Realizar_Reserva::class.java)
+            val intent = Intent(this@Reserva,Menu_Reservas::class.java)
             startActivity(intent)
         }
     }
