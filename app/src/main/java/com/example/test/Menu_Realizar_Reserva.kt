@@ -6,7 +6,9 @@ import android.content.Intent
 import android.icu.util.Calendar
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.ArrayAdapter
 import android.widget.ImageButton
+import android.widget.Spinner
 import android.widget.Toast
 import com.google.android.material.textfield.TextInputLayout
 
@@ -15,10 +17,25 @@ class Menu_Realizar_Reserva : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_menu_realizar_reserva)
 
+        //REFERENCIAS
+        val list_locales = findViewById<Spinner>(R.id.list_locales)
         val date = findViewById<TextInputLayout>(R.id.date)
         val hour = findViewById<TextInputLayout>(R.id.hour)
         val btn_rollbackMRR = findViewById<ImageButton>(R.id.btn_rollbackMRR)
         val btn_saveReserve = findViewById<ImageButton>(R.id.btn_saveReserve)
+        val list_servicio = findViewById<Spinner>(R.id.list_servicio)
+
+        //GENERACION DE SPINNER LOCALES
+        val arrayAdapterLocales : ArrayAdapter<*>
+        val Locales = arrayOf(
+            "Selecciona el local",
+            "Local 1",
+            "Local 2",
+            "Local 3",
+            "Local 4"
+        )
+        arrayAdapterLocales = ArrayAdapter(this,android.R.layout.simple_spinner_dropdown_item,Locales)
+        list_locales.adapter = arrayAdapterLocales
 
         //Intancia de calendar
         val calendar = Calendar.getInstance();
@@ -61,6 +78,18 @@ class Menu_Realizar_Reserva : AppCompatActivity() {
                 true
             ).show()
         }
+
+        //GENERACION DE SPINNER SERVICIO
+        val arrayAdapterServicio : ArrayAdapter<*>
+        val Servicio = arrayOf(
+            "Selecciona el servicio",
+            "Peluqueria",
+            "Manicure",
+            "Pedicure",
+            "Limpieza facial"
+        )
+        arrayAdapterServicio = ArrayAdapter(this,android.R.layout.simple_spinner_dropdown_item,Servicio)
+        list_servicio.adapter = arrayAdapterServicio
 
         //Boton volver
         btn_rollbackMRR.setOnClickListener {

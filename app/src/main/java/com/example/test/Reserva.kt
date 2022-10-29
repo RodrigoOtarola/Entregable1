@@ -13,8 +13,15 @@ class Reserva : AppCompatActivity() {
         setContentView(R.layout.activity_reserva)
 
         //REFERENCIAS
+        val btn_editarReserva = findViewById<ImageButton>(R.id.btn_editarReserva)
         val btn_eliminarReserva = findViewById<ImageButton>(R.id.btn_eliminarReserva)
         val btn_rollbackReserva = findViewById<ImageButton>(R.id.btn_rollbackReserva)
+
+        //BOTON EDITAR RESERVA
+        btn_editarReserva.setOnClickListener {
+            val intent = Intent(this@Reserva,Servicio::class.java)
+            startActivity(intent)
+        }
 
         //BOTON CONFIRMAR ELIMINACION
         btn_eliminarReserva.setOnClickListener {
