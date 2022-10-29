@@ -30,7 +30,7 @@ class Menu_Reservas : AppCompatActivity() {
 
         //BOTON HISTORIAL
         btn_historialReserva.setOnClickListener {
-            val intent = Intent(this@Menu_Reservas,Reserva::class.java)
+            val intent = Intent(this@Menu_Reservas,Menu_Historial::class.java)
             startActivity(intent)
         }
 
