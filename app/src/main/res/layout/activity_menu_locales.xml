@@ -11,7 +11,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="481dp"
         android:layout_height="466dp"
-        android:layout_marginTop="96dp"
+        android:layout_marginTop="84dp"
         app:layout_constraintTop_toTopOf="parent"
         tools:layout_editor_absoluteX="1dp">
 
@@ -19,7 +19,7 @@
             android:id="@+id/textView6"
             android:layout_width="367dp"
             android:layout_height="50dp"
-            android:layout_marginStart="40dp"
+            android:layout_marginStart="32dp"
             android:background="#A662BB"
             android:text="Locales"
             android:textAlignment="center"
@@ -29,14 +29,14 @@
             tools:layout_editor_absoluteY="140dp" />
 
         <ImageButton
-            android:id="@+id/btn_irRealizarReserva"
-            android:layout_width="61dp"
-            android:layout_height="50dp"
-            android:layout_marginEnd="72dp"
-            android:background="#A662BB"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:srcCompat="@drawable/ic_baseline_local_activity_24"
-            tools:layout_editor_absoluteY="140dp" />
+            android:id="@+id/btn_irMLL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="@+id/textView6"
+            app:layout_constraintTop_toTopOf="@+id/textView6"
+            app:srcCompat="@drawable/ic_baseline_local_activity_24" />
 
         <TextView
             android:id="@+id/textView7"
@@ -53,14 +53,14 @@
             app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
         <ImageButton
-            android:id="@+id/btn_irEditarReserva"
-            android:layout_width="61dp"
-            android:layout_height="50dp"
-            android:layout_marginTop="40dp"
-            android:layout_marginEnd="72dp"
-            android:background="#A662BB"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btn_irRealizarReserva"
+            android:id="@+id/btn_irUbicacion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            app:layout_constraintEnd_toEndOf="@+id/textView7"
+            app:layout_constraintHorizontal_bias="0.924"
+            app:layout_constraintStart_toStartOf="@+id/textView7"
+            app:layout_constraintTop_toTopOf="@+id/textView7"
             app:srcCompat="@drawable/ic_baseline_location_on_24" />
 
         <TextView
@@ -78,14 +78,14 @@
             app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
         <ImageButton
-            android:id="@+id/btn_historialReserva"
-            android:layout_width="61dp"
-            android:layout_height="50dp"
-            android:layout_marginTop="34dp"
-            android:layout_marginEnd="72dp"
-            android:background="#A662BB"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btn_irEditarReserva"
+            android:id="@+id/btn_irServicios"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            app:layout_constraintEnd_toEndOf="@+id/textView8"
+            app:layout_constraintHorizontal_bias="0.924"
+            app:layout_constraintStart_toStartOf="@+id/textView8"
+            app:layout_constraintTop_toTopOf="@+id/textView8"
             app:srcCompat="@drawable/ic_baseline_format_list_bulleted_24" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

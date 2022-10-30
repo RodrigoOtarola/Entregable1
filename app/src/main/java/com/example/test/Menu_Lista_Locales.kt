@@ -18,7 +18,7 @@ class Menu_Lista_Locales : AppCompatActivity() {
 
         //Boton volver
         btn_rollbackMLL.setOnClickListener {
-            val intent = Intent(this@Menu_Lista_Locales,Front_Principal::class.java)
+            val intent = Intent(this@Menu_Lista_Locales,Menu_Locales::class.java)
             startActivity(intent)
         }
 

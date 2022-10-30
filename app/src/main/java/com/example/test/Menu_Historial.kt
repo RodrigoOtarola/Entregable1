@@ -10,14 +10,16 @@ class Menu_Historial : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_menu_historial)
 
+        //MH= Menu historial
+
         // declaro variables
-        val btn_servicio1 = findViewById<ImageButton>(R.id.btn_servicio1)
+        /*val btn_servicio1 = findViewById<ImageButton>(R.id.btn_servicio1)
         val btn_servicio2 = findViewById<ImageButton>(R.id.btn_servicio2)
-        val btn_servicio3= findViewById<ImageButton>(R.id.btn_servicio3)
-        val btn_return = findViewById<ImageButton>(R.id.btn_return)
+        val btn_servicio3= findViewById<ImageButton>(R.id.btn_servicio3)*/
+        val btn_rollbackMH = findViewById<ImageButton>(R.id.btn_rollbackMH)
 
         //BOTON SERVICIO 1 POR DEFINIR
-        btn_servicio1.setOnClickListener {
+        /*btn_servicio1.setOnClickListener {
             val intent = Intent(this@Menu_Historial,Menu_Realizar_Reserva::class.java)
             startActivity(intent)
         }
@@ -33,9 +35,9 @@ class Menu_Historial : AppCompatActivity() {
             val intent = Intent(this@Menu_Historial,Menu_Historial::class.java)
             startActivity(intent)
         }
-
+*/
         //BOTON VOLVER A MENU RESERVA
-        btn_return.setOnClickListener {
+        btn_rollbackMH.setOnClickListener {
             val intent = Intent(this@Menu_Historial,Menu_Reservas::class.java)
             startActivity(intent)
         }

@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageButton
+import android.widget.Toast
 
 class Servicio : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -13,18 +14,19 @@ class Servicio : AppCompatActivity() {
 
         //MS = menu_Servicio
 
-        val btn_rollback = findViewById<ImageButton>(R.id.btn_rollback)
-        val btn_reservar = findViewById<Button>(R.id.btn_reservar)
+        val btn_rollbackServicio = findViewById<ImageButton>(R.id.btn_rollbackServicio)
+        val btn_editarReservaS = findViewById<Button>(R.id.btn_register)
 
         //Boton volver
-        btn_rollback.setOnClickListener {
-            val intent = Intent(this@Servicio,Menu_Locales::class.java)
+        btn_rollbackServicio.setOnClickListener {
+            val intent = Intent(this@Servicio,Reserva::class.java)
             startActivity(intent)
         }
 
-        //Boton reservar
-        btn_reservar.setOnClickListener {
-            val intent = Intent(this@Servicio,Menu_Locales::class.java)
+        //Boton editar reservar
+        btn_editarReservaS.setOnClickListener {
+            val intent = Intent(this@Servicio,Reserva::class.java)
+            Toast.makeText(this, "Reserva editada con exito", Toast.LENGTH_SHORT).show()
             startActivity(intent)
         }
     }

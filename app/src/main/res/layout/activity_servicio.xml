@@ -8,35 +8,53 @@
     android:background="#75358B"
     tools:context=".Servicio">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintLayout2"
-        android:layout_width="412dp"
-        android:layout_height="63dp"
-        android:layout_marginTop="44dp"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="35dp">
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline22"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.05" />
 
-        <ImageButton
-            android:id="@+id/imageButton10"
-            android:layout_width="63dp"
-            android:layout_height="63dp"
-            android:layout_marginTop="4dp"
-            android:layout_marginEnd="36dp"
-            android:background="#75358B"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/ic_baseline_replay_24" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline23"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.95" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline24"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.05" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline25"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" />
+
+    <ImageButton
+        android:id="@+id/btn_rollbackServicio"
+        android:layout_width="61dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="8dp"
+        android:background="#75358B"
+        app:layout_constraintEnd_toStartOf="@+id/guideline23"
+        app:layout_constraintHorizontal_bias="0.826"
+        app:layout_constraintStart_toStartOf="@+id/guideline22"
+        app:layout_constraintTop_toTopOf="@+id/guideline24"
+        app:srcCompat="@drawable/ic_baseline_replay_24" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="362dp"
         android:layout_height="318dp"
-        android:layout_marginTop="32dp"
         android:background="#FFFBFE"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout2">
+        app:layout_constraintEnd_toStartOf="@+id/guideline23"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="@+id/guideline22"
+        app:layout_constraintTop_toBottomOf="@+id/textView5">
 
         <Button
             android:id="@+id/btn_register"
@@ -135,13 +153,14 @@
         android:id="@+id/textView5"
         android:layout_width="362dp"
         android:layout_height="31dp"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="88dp"
         android:background="#FFFBFE"
         android:text="Informacion de reserva"
         android:textColor="#000000"
         android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/constraintLayout2" />
+        app:layout_constraintEnd_toStartOf="@+id/guideline23"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="@+id/guideline22"
+        app:layout_constraintTop_toTopOf="@+id/guideline24" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

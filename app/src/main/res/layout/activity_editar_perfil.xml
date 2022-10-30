@@ -35,10 +35,22 @@
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.95" />
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/name"
-        android:layout_width="300dp"
+    <Button
+        android:id="@+id/btn_updateUser"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="ACTUALIZAR"
+        app:layout_constraintBottom_toTopOf="@+id/guideline3"
+        app:layout_constraintEnd_toStartOf="@+id/guideline5"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="@+id/guideline4"
+        app:layout_constraintTop_toBottomOf="@+id/confirm_passwordEdit" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/nameEdit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
         app:layout_constraintEnd_toStartOf="@+id/guideline5"
         app:layout_constraintStart_toStartOf="@+id/guideline4"
         app:layout_constraintTop_toTopOf="@+id/guideline2">
@@ -50,43 +62,43 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/first_name"
-        android:layout_width="300dp"
+        android:id="@+id/first_nameEdit"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         app:layout_constraintEnd_toStartOf="@+id/guideline5"
         app:layout_constraintStart_toStartOf="@+id/guideline4"
-        app:layout_constraintTop_toBottomOf="@+id/name">
+        app:layout_constraintTop_toBottomOf="@+id/nameEdit">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Apellido" />
+            android:hint="Apellidos" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/email"
-        android:layout_width="300dp"
+        android:id="@+id/emailEdit"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         app:layout_constraintEnd_toStartOf="@+id/guideline5"
         app:layout_constraintStart_toStartOf="@+id/guideline4"
-        app:layout_constraintTop_toBottomOf="@+id/first_name">
+        app:layout_constraintTop_toBottomOf="@+id/first_nameEdit">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Correo electrónico" />
+            android:hint="Correo Electrónico" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/password"
-        android:layout_width="300dp"
+        android:id="@+id/passwordEdit"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         app:layout_constraintEnd_toStartOf="@+id/guideline5"
         app:layout_constraintStart_toStartOf="@+id/guideline4"
-        app:layout_constraintTop_toBottomOf="@+id/email"
+        app:layout_constraintTop_toBottomOf="@+id/emailEdit"
         app:passwordToggleEnabled="true">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -97,31 +109,19 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/confirm_password"
-        android:layout_width="300dp"
+        android:id="@+id/confirm_passwordEdit"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         app:layout_constraintEnd_toStartOf="@+id/guideline5"
         app:layout_constraintStart_toStartOf="@+id/guideline4"
-        app:layout_constraintTop_toBottomOf="@+id/password"
+        app:layout_constraintTop_toBottomOf="@+id/passwordEdit"
         app:passwordToggleEnabled="true">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Confirma contraseña"
+            android:hint="Confirmar contraseña"
             android:password="true" />
     </com.google.android.material.textfield.TextInputLayout>
-
-    <Button
-        android:id="@+id/btn_updateUser"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="ACTUALIZAR"
-        app:layout_constraintBottom_toTopOf="@+id/guideline3"
-        app:layout_constraintEnd_toStartOf="@+id/guideline5"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="@+id/guideline4"
-        app:layout_constraintTop_toBottomOf="@+id/confirm_password"
-        app:layout_constraintVertical_bias="0.176" />
 </androidx.constraintlayout.widget.ConstraintLayout>

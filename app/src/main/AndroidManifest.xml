@@ -33,7 +33,7 @@
             android:name=".Menu_Servicio"
             android:exported="false" />
         <activity
-            android:name=".Splash"
+            android:name=".Menu_Locales"
             android:exported="false" />
         <activity
             android:name=".Menu_Lista_Locales"
@@ -42,10 +42,10 @@
             android:name=".Menu_Mapa"
             android:exported="false" />
         <activity
-            android:name=".Menu_Locales"
+            android:name=".Menu_Historial"
             android:exported="false" />
         <activity
-            android:name=".Menu_Historial"
+            android:name=".Servicio"
             android:exported="false" />
         <activity
             android:name=".Menu_Lista"
@@ -60,7 +60,7 @@
             android:name=".Editar_Perfil"
             android:exported="false" /> <!-- Prueba Rodrigo -->
         <activity
-            android:name=".Servicio"
+            android:name=".Menu_Reservas"
             android:exported="false">
 
             <!-- <intent-filter> -->
@@ -71,7 +71,7 @@
             <!-- </intent-filter> -->
         </activity>
         <activity
-            android:name=".Menu_Reservas"
+            android:name=".Splash"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
