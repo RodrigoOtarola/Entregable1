@@ -24,7 +24,7 @@ class Menu_Reservas : AppCompatActivity() {
 
         //BOTON EDITAR RESERVA
         btn_irEditarReserva.setOnClickListener {
-            val intent = Intent(this@Menu_Reservas,Servicio::class.java)
+            val intent = Intent(this@Menu_Reservas,Reserva::class.java)
             startActivity(intent)
         }
 
