@@ -12,6 +12,26 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Test"
         tools:targetApi="31">
+
+        <!--
+             TODO: Before you run your application, you need a Google Maps API key.
+
+             To get one, follow the directions here:
+
+                https://developers.google.com/maps/documentation/android-sdk/get-api-key
+
+             Once you have your API key (it starts with "AIza"), define a new property in your
+             project's local.properties file (e.g. MAPS_API_KEY=Aiza...), and replace the
+             "YOUR_API_KEY" string in this file with "${MAPS_API_KEY}".
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/API_KEY_GOOGLE" />
+
+        <activity
+            android:name=".MenuGPS"
+            android:exported="false"
+            android:label="@string/title_activity_menu_gps" />
         <activity
             android:name=".Register"
             android:exported="false">
@@ -33,7 +53,7 @@
             android:name=".Menu_Servicio"
             android:exported="false" />
         <activity
-            android:name=".Menu_Locales"
+            android:name=".Menu_Realizar_Reserva"
             android:exported="false" />
         <activity
             android:name=".Menu_Lista_Locales"
@@ -60,7 +80,7 @@
             android:name=".Editar_Perfil"
             android:exported="false" /> <!-- Prueba Rodrigo -->
         <activity
-            android:name=".Splash"
+            android:name=".Menu_Locales"
             android:exported="false">
 
             <!-- <intent-filter> -->
@@ -71,7 +91,7 @@
             <!-- </intent-filter> -->
         </activity>
         <activity
-            android:name=".Menu_Realizar_Reserva"
+            android:name=".Splash"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

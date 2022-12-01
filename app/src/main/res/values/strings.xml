@@ -1,11 +1,12 @@
 <resources>
     <string name="app_name">Tu espacio!!</string>
 
-<!--    Errores-->
+    <!--    Errores-->
 
     <string name="error_user">Este campo es requerido</string>
     <string name="error_pass">Este campo es requerido</string>
     <string name="error_user_mail">Formato invalido</string>
     <string name="error_name">Campo obligatorio</string>
     <string name="equals_pass">Contraseñas no coinciden</string>
+    <string name="title_activity_menu_gps">MenuGPS</string>
 </resources>

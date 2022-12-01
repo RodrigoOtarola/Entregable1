@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--    templateMergeStrategy por si la configuracion cambia de idioma mantiene la variable-->
+    <string name="API_KEY_GOOGLE" templateMergeStrategy="preserve" translatable="false">AIzaSyCBDPz5MbWRJwCq1IM-59lrGzi2eMRxKKs</string>
+</resources>

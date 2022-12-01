@@ -23,7 +23,7 @@ class Menu_Locales : AppCompatActivity() {
 
         //BOTON IR A UBICACION
         btn_irUbicacion.setOnClickListener{
-            val intent = Intent(this@Menu_Locales,Menu_Mapa::class.java)
+            val intent = Intent(this@Menu_Locales,MenuGPS::class.java)
             startActivity(intent)
         }
 
