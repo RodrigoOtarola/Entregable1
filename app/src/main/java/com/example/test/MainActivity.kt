@@ -4,18 +4,26 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.Toast
+import androidx.lifecycle.lifecycleScope
+import androidx.room.Room
 import com.google.android.material.textfield.TextInputLayout
+import kotlinx.coroutines.launch
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        //Inicializar DDBB
+        val room =
+            Room.databaseBuilder(this, DDBB::class.java, "estetica.db").allowMainThreadQueries()
+                .build()
+
         val user = findViewById<TextInputLayout>(R.id.user)
         val pass = findViewById<TextInputLayout>(R.id.pass)
         val btn_login = findViewById<Button>(R.id.btn_login)
         val btn_register = findViewById<Button>(R.id.btn_register)
-
 
         //Boton iniciar sesión
         btn_login.setOnClickListener {
@@ -23,13 +31,27 @@ class MainActivity : AppCompatActivity() {
             var Pass = pass.editText?.text.toString()
 
             if (validarCampos() == 0) {
-
-                val intent = Intent(this@MainActivity, Front_Principal::class.java)
-                startActivity(intent)
+                lifecycleScope.launch {
+                    val response = room.daoUsuario().login(User, Pass)
+                    if (response.size == 1) {
+                        val intent = Intent(this@MainActivity, Front_Principal::class.java)
+                        intent.putExtra("mail", User)
+                        Toast.makeText(this@MainActivity, "Inicio exitoso", Toast.LENGTH_SHORT)
+                            .show()
+                        startActivity(intent)
+                    } else {
+                        Toast.makeText(this@MainActivity, "Login fallido", Toast.LENGTH_SHORT)
+                            .show()
+                    }
+                    //Mostrar en consola
+                    val respuesta = room.daoUsuario().obtenerUsuarios()
+                    for (elemento in respuesta) {
+                        println(elemento.toString())
+                    }
+                }
             }
         }
-
-        //Boton de re registro
+        //Boton de registro
         btn_register.setOnClickListener {
             val intent = Intent(this@MainActivity, Register::class.java)
             startActivity(intent)
