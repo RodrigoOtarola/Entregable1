@@ -15,8 +15,8 @@ interface DaoReservas {
     @Query("SELECT * FROM Reservas WHERE user=:user")
     suspend fun obtenerReservasUsuario(user: String): List<Reservas>
 
-    @Query("SELECT * FROM Reservas WHERE local=:local AND user=:user")
-    suspend fun obtenerReservasPorLocal(local: String,user: String): List<Reservas>
+    @Query("SELECT * FROM Reservas WHERE servicio=:servicio AND user=:user")
+    suspend fun obtenerReservasPorServicio(servicio: String,user: String): List<Reservas>
 
     @Insert
     suspend fun agregarReserva(coctel: Reservas):Long

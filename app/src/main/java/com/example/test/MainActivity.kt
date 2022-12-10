@@ -23,7 +23,7 @@ class MainActivity : AppCompatActivity() {
         val user = findViewById<TextInputLayout>(R.id.user)
         val pass = findViewById<TextInputLayout>(R.id.pass)
         val btn_login = findViewById<Button>(R.id.btn_login)
-        val btn_register = findViewById<Button>(R.id.btn_register)
+        val btn_register = findViewById<Button>(R.id.btn_editar)
 
         //Boton iniciar sesión
         btn_login.setOnClickListener {
