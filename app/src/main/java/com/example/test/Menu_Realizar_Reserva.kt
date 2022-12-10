@@ -10,12 +10,24 @@ import android.widget.ArrayAdapter
 import android.widget.ImageButton
 import android.widget.Spinner
 import android.widget.Toast
+import androidx.lifecycle.lifecycleScope
+import androidx.room.Room
+import com.example.test.entity.Reservas
 import com.google.android.material.textfield.TextInputLayout
+import kotlinx.coroutines.launch
 
 class Menu_Realizar_Reserva : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_menu_realizar_reserva)
+
+        //Inicializar DDBB
+        val room =
+            Room.databaseBuilder(this, DDBB::class.java, "estetica.db").allowMainThreadQueries()
+                .build()
+
+        //variable de usuario
+        val mail: String = intent.getStringExtra("mail").toString()
 
         //REFERENCIAS
         val list_locales = findViewById<Spinner>(R.id.list_locales)
@@ -99,12 +111,35 @@ class Menu_Realizar_Reserva : AppCompatActivity() {
 
         //Boton de guardar con validacion
         btn_saveReserve.setOnClickListener {
-            var Date = date.editText?.text.toString()
-            var Hour = hour.editText?.text.toString()
+            //Para leer selección de spinner es con selectedItem
+            var local  = list_locales.selectedItem.toString()
+            var fecha = date.editText?.text.toString()
+            var hora = hour.editText?.text.toString()
+            var servicio  = list_servicio.selectedItem.toString()
+            //Construir var id para el valor de la inserción si es mayor a 1 inserta.
+            var id:Long = 0
+
+            //Instancia del objeto Reservas
+            var reservas = Reservas(local,fecha,hora, servicio,mail)
+
             if (validarCampos()==0) {
-                Toast.makeText(this, "Reserva realizada con exito", Toast.LENGTH_SHORT).show()
-                val intent = Intent(this@Menu_Realizar_Reserva, Menu_Reservas::class.java)
-                startActivity(intent)
+                //Corrutina
+                lifecycleScope.launch{
+                    id = room.daoReserva().agregarReserva(reservas)
+                    //Ver informacion en el log
+                    var respuesta = room.daoReserva().obtenerReserva()
+                    for(elemento in respuesta){
+                        println(elemento.toString())
+                    }
+                    if(id>0){
+                        Toast.makeText(this@Menu_Realizar_Reserva, "Reserva realizada con exito", Toast.LENGTH_SHORT).show()
+                        val intent = Intent(this@Menu_Realizar_Reserva, Menu_Reservas::class.java)
+                        intent.putExtra("mail",mail)
+                        startActivity(intent)
+                    }
+
+                }
+
             }
         }
     }
